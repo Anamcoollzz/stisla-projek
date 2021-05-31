@@ -12,17 +12,23 @@ class GenerateMenu extends Seeder
      */
     public function run()
     {
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        DB::table('menu')->truncate();
     	$i = 1;
-        Menu::updateOrCreate([
+        Menu::create([
         	'id'		=> $i++,
-        ], [
         	'nama'		=> 'Dashboard',
         	'ikon'		=> 'fas fa-fire',
         	'route'		=> 'dashboard',
         ]);
-        Menu::updateOrCreate([
+        Menu::create([
         	'id'		=> $i++,
-        ], [
+        	'nama'		=> 'Profil',
+        	'ikon'		=> 'fas fa-user',
+        	'route'		=> 'profil',
+        ]);
+        Menu::create([
+        	'id'		=> $i++,
         	'nama'		=> 'Keluar',
         	'ikon'		=> 'fas fa-sign-out-alt',
         	'route'		=> 'keluar',

@@ -10,7 +10,7 @@ class AutentikasiController extends Controller
 {
 	public function formMasuk()
 	{
-		return view('stisla.autentikasi.masuk');
+		return view('stisla.autentikasi.masuk', ['title'=>'Masuk']);
 	}
 
 	public function masuk(Request $request)

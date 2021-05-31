@@ -1,1 +1,0 @@
-@input(['type'=>'number', 'min'=>isset($min) ? $min : false, 'max'=>isset($max) ? $max : false])
